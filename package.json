@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "name": "nodejs-ai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Leo Maskell",
+  "license": "MIT",
+  "description": "nodejs ml program for mushrooms"
+}
