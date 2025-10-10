@@ -1,4 +1,10 @@
+// mushroom AI
+const synaptic = require("synaptic");
+
+
+// loading the dataset
 const { loadDataset } = require(__dirname + '/dataset/dataset.js');
+
 
 async function main() {
     try {
@@ -22,6 +28,4 @@ async function main() {
 main().then(({ trainSet, testSet }) => {
     console.log(`the train-set length: \n${trainSet.length}`);
     console.log(`the test-set length: \n${testSet.length}`);
-
-    
 });
