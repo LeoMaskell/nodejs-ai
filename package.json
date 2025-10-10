@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "brain": "^1.0.0",
+    "cjs": "^0.0.11",
     "csv-parse": "^6.1.0",
     "fs": "^0.0.1-security",
     "mathjs": "^15.0.0",

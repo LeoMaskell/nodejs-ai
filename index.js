@@ -1,10 +1,18 @@
 // mushroom AI
 const synaptic = require("synaptic");
 
+// defining the model
+var A = new synaptic.Layer(23);
+var B = new synaptic.Layer(800);
+var C = new synaptic.Layer(2);
+
+var connection = A.project(B);
+C.gate(connection, synaptic.Layer.gateType.INPUT_GATE); // now C gates the connection between A and B (input gate)
+
+
 
 // loading the dataset
 const { loadDataset } = require(__dirname + '/dataset/dataset.js');
-
 
 async function main() {
     try {
