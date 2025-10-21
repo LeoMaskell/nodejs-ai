@@ -4,14 +4,16 @@ const { Neuron, Layer, Network, Trainer } = require('synaptic');
 
 // define the network
 const A = new Layer(784);
-const B = new Layer(10);
+const B = new Layer(25);
+const C = new Layer(10);
 A.project(B); // A - B connection
-B.set({ squash: Neuron.squash.Sigmoid }); // squashing function
+B.project(C); // B - C connection
+C.set({ squash: Neuron.squash.Sigmoid }); // squashing function for C
 
 const net = new Network({
 	input: A,
-	hidden: [],
-	output: B
+	hidden: [B],
+	output: C
 });
 console.log(net);
 
