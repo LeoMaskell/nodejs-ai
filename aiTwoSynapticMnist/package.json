@@ -1,0 +1,15 @@
+{
+  "name": "aitwosynapticmnist",
+  "version": "1.0.0",
+  "description": "classification NN with mnist",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Leo Maskell",
+  "license": "MIT",
+  "dependencies": {
+    "mnist": "^1.1.0",
+    "synaptic": "^1.1.4"
+  }
+}
