@@ -29,8 +29,13 @@ var trainer = new Trainer(net);
 trainer.train(trainSet, {
 	rate: .1,
 	iterations: 20000,
-	error: .005,
+	error: .1,
 	shuffle: true,
-	log: 1000,
+	log: 1,
 	cost: Trainer.cost.CROSS_ENTROPY
 });
+
+// testing
+for (i = 0; i<10; i++) {
+	console.log(net.activate(mnist[i].get()), 'should be a', i); // should be the i'th term
+};
