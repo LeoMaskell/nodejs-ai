@@ -4,10 +4,11 @@ const { Neuron, Layer, Network, Trainer } = require('synaptic');
 
 // define the network
 const A = new Layer(784);
-const B = new Layer(25);
+const B = new Layer(50);
 const C = new Layer(10);
 A.project(B); // A - B connection
 B.project(C); // B - C connection
+A.set({ squash: Neuron.squash.HLIM });
 B.set({ squash: Neuron.squash.ReLU });    // squashing function for B
 C.set({ squash: Neuron.squash.SIGMOID }); // squashing function for C
 
@@ -21,7 +22,7 @@ console.log(net);
 
 // dataset setup
 const mnist = require('mnist');
-const set = mnist.set(500, 20);
+const set = mnist.set(600, 20);
 const trainSet = set.training;
 const testSet = set.testing;
 
